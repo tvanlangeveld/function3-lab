@@ -63,10 +63,14 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 // CODE HERE
-// const totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+ const totalPopulation   = populations.reduce((acc, cur) => acc + cur)
 
 
+console.log(totalPopulation)
 
+console.log(8175133 + 3792621 + 2695598 + 2100263)
+
+console.log('================================')
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
@@ -88,9 +92,9 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 // CODE HERE
-// const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+const myStrongest  = monstersInYourPocket.filter((monster) => monster.CP >= 200)
 
-
+console.log(myStrongest)
 
 ////////// PROBLEM 5 //////////
 
@@ -107,8 +111,9 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 
 // CODE HERE
 
-
-
+const totalOrder = orders.map((taxTotal) => taxTotal.price + (taxTotal.price * taxTotal.tax))
+  
+console.log(totalOrder)
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
@@ -126,3 +131,12 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 // CODE HERE
+
+const bobsTotal = purchases.filter((bobio) => {
+  return bobio.owner === 'Bob'
+}).reduce((acc, cur) => acc + cur.price,0)
+
+console.log(bobsTotal)
+
+
+

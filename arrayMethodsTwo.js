@@ -11,6 +11,12 @@ let numbers = [40, 68, 14, 90, 49];
 
 // CODE HERE
 
+const newNumbers = numbers.forEach((number) => {
+  return console.log (number / 2)
+})
+
+console.log(newNumbers)
+
 
 ////////// PROBLEM 2 //////////
 
@@ -24,6 +30,12 @@ let numbers = [40, 68, 14, 90, 49];
 
 // CODE HERE
 
+const newArrayTwo = numbers.map((num) => {
+  return  num / 2
+}
+)
+
+console.log(newArrayTwo)
 
 ////////// PROBLEM 3 //////////
 
@@ -51,6 +63,11 @@ let cities = [
 
 // CODE HERE
 
+const newCityArr = cities.filter((city) => {
+  return city.endsWith('i')
+})
+
+console.log(newCityArr)
 
 ////////// PROBLEM 4 //////////
 
@@ -87,8 +104,18 @@ let fruits = [
 
 // CODE HERE
 
+const newFruits = fruits.forEach((food, num) => {
+  if(food.color === 'red'){
+    console.log(`the fruit with index${num} is an apple`)
+  } else if(food.color === 'orange'){
+    console.log(`the fruit with index${num} is an orange`)
+  } else if(food.color !== 'red' && food.name !== 'apple'){
+    console.log(`the fruit with index${num} is not an apple or orange`)
+  }
+})
 
 
+console.log(newFruits)
 /* 
     Run the code in node to see the result. Then, copy and paste the result below.
 
@@ -147,5 +174,10 @@ let foods = [
 // CODE HERE
 
 
+const riceTotal = foods.filter((rice) => {
+  return rice.tags.includes('rice')
+}).reduce((acc, cur) => acc + cur.price,0)
+
+console.log(riceTotal)
 // THE TOTAL
 
